@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+      // Target ECMAScript version for the output files. Common options include 'ES5', 'ES6', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNext'.
+      "target": "ES2020",
+  
+      // Specify the module code generation method. Common options are 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'ESNext', etc.
+      "module": "commonjs",
+  
+      // Enable strict type-checking options. This is a shorthand for enabling all the strict mode family options.
+      "strict": true,
+
+      // Specify the root directory of input files. Use to control the output directory structure with --outDir.
+      "rootDir": "src/",
+  
+      // Redirect output structure to the directory. This is where the compiled JavaScript files will be placed.
+      "outDir": "dist/",
+  
+      // Enable sourcemap generation, useful for debugging the TypeScript code in a browser or Node.js.
+      "sourceMap": true,
+  
+      // Report errors on unused local variables.
+      "noUnusedLocals": true,
+  
+      // Enable import helpers for emitted code to reduce code size.
+      "importHelpers": true,
+  
+      // Do not emit compiler output files like JavaScript and declaration files.
+      "noEmit": false,
+  
+      // Report error when not all code paths in function return a value.
+      "noImplicitReturns": true,
+  
+      // Raise error on 'this' expressions with an implied 'any' type.
+      "noImplicitThis": true,
+  
+      // Enable strict checking of property initialization in classes.
+      "strictPropertyInitialization": true,
+  
+      // Disable emitting files if any type checking errors are reported.
+      "noEmitOnError": true,
+  
+      // Treat files as ES modules.
+      "moduleResolution": "node",
+
+      "esModuleInterop": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }
