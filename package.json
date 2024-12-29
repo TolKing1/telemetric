@@ -4,7 +4,7 @@
     "description": "A Telegram client using TypeScript and GramJS",
     "main": "dist/index.js",
     "scripts": {
-        "start": "ts-node src/index.ts",
+        "start": "ts-node src/index.ts && node dist/index.js",
         "build": "tsc",
         "watch": "tsc --watch",
         "run": "node dist/index.js",
