@@ -1,0 +1,14 @@
+# Ignore environment file
+.env
+
+# Ignore compiled files
+dist/
+
+# VSCode settings
+.vscode/
+
+# Node modules
+node_modules/
+
+# Ignore logs
+logs/
