@@ -55,7 +55,7 @@ export class TelegramService {
     async getReplyMessage(message: Api.Message): Promise<Api.Message> {
         const replyMessage: Api.Message | undefined = await message.getReplyMessage();
         if (replyMessage) {
-            logger.info(`Reply message fetched: ${replyMessage}`);
+            logger.info(`Reply message fetched: ${replyMessage.id}`);
             return replyMessage;
         } else {
             logger.warn(`No reply message found for message ID ${message.id}`);
