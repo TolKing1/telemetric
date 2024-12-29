@@ -11,29 +11,24 @@ const commonFormats: Format = format.combine(
   format.printf(({ timestamp, level, message }) => `[${timestamp}] [${level}] - ${message}`)
 );
 
-const createConsoleTransport = (level: string): transports.ConsoleTransportInstance => {
+const createConsoleTransport = (): transports.ConsoleTransportInstance => {
   return new transports.Console({
-    level,
     format: commonFormats
   });
 };
 
-const createFileTransport = (filename: string, level: string): transports.FileTransportInstance => {
+const createFileTransport = (filename: string): transports.FileTransportInstance => {
   return new transports.File({
     filename,
-    level,
     format: commonFormats
   });
 };
 
 const logger: Logger = createLogger({
+  level: 'debug',
   transports: [
-    createConsoleTransport('info'),
-    createConsoleTransport('debug'),
-    createConsoleTransport('error'),
-    createFileTransport('logs/all.log', 'info'),
-    createFileTransport('logs/all.log', 'debug'),
-    createFileTransport('logs/all.log', 'error')
+    createConsoleTransport(),
+    createFileTransport('logs/all.log')
   ]
 });
 
